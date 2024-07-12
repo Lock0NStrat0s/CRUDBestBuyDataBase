@@ -12,8 +12,13 @@ public class ProductRepository : IProductRepository
         _conn = conn;
     }
 
-    public IEnumerable<ProductModel> GetAllProducts()
+    public IEnumerable<Product> GetAllProducts()
     {
-        return _conn.Query<ProductModel>("SELECT * FROM PRODUCTS;");
+        return _conn.Query<Product>("SELECT * FROM PRODUCTS;");
+    }
+
+    public Product GetProduct(int id)
+    {
+        return _conn.QuerySingle<Product>("SELECT * FROM PRODUCTS WHERE PRODUCTID = @id", new { id = id });
     }
 }

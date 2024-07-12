@@ -4,5 +4,7 @@ namespace CRUDBestBuyDataBase.Repositories;
 
 public interface IProductRepository
 {
-    public IEnumerable<ProductModel> GetAllProducts();
+    public IEnumerable<Product> GetAllProducts();
+    Product GetProduct(int id);
+
 }

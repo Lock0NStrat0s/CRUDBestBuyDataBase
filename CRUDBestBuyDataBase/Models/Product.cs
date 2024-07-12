@@ -1,8 +1,8 @@
 ﻿namespace CRUDBestBuyDataBase.Models;
 
-public class ProductModel
+public class Product
 {
-    public ProductModel()
+    public Product()
     {
     }
 
